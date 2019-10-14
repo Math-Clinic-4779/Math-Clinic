@@ -1,0 +1,19 @@
+Notes from Dr. Billups on our report first draft:
+- the report contained grammatical errors and he would like us to have the writing center look over our final report before we hand it in.
+- we do not need to worry about the Google API part because another group will be handling that.
+- dynamic scheduling (i.e. having a backup schedule in case a truck breaks down or someone calls in) may be a bit ambitious and we can worry about that feature if we have extra time.
+- Dr. Billups likes the idea of testing our algorithm and the other group's algorithms.
+- He would like us to think in terms of time when deciding efficiency since the dumps and drive times are already in terms of time.
+- we will be using fixed times between points, we will not be taking drive times that change throughout the day into consideration
+- He would like clarification of the simplified phase I algorithm and model
+- write up the phase I report and then build uppon that report for the phase two (final) report
+- Need to designate tasks to particular people
+- wants more detail in the technical description of the problem - describe it as if the reader is not in this class.
+
+Notes from Sam's Hauling guys:
+- start w/ areas you will be short on dumpsters b/c that driver can find a dumpster at the shop
+- prioritize decisions that allow the driver to pick up/dump/and deliver that same can to the next customer
+- need to have yard counts start of the day and as it progresses throughout the day. yards have minimums.
+- sam always storts by region first.
+- having a driver stick to the same region has advantages
+- the stopping point is 80 moves a day
