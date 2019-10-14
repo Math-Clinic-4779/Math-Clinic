@@ -1,0 +1,104 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+\geometry{a4paper,scale=0.8}
+
+\title{Math Clinic Project Proposal}
+\author{Sarah Janssen, Kaichao Chang, Anqi Hou, Serena Walker}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{Technical Description}
+In this part of our proposal, we want to show some basic information for what we will do in this course. Sam's Hauling, Inc. provides small dumpsters of various sizes to homeowners, contractors, realtors and property managers throughout the metro Denver area. Currently they spend a long time working out the schedule through excel because of various multi-variables, which is inefficient. Besides inefficiency, to some extent, scheduling through excel lacks flexibility. Thus, our group will try to work out a solution with both flexibility and efficiency. \\
+
+The complexity can be shown by using google API, availability of a certain size dumpster, truck size restraints etc. We are not supposed to struggle through our first step due to the complexity of this problem. Thus, we plan to start with a very simple version of this problem. 
+
+
+\subsection{The Solution We Want to Provide}
+\begin{itemize}
+    \item We would like to give Sam’s a list of some possible solutions with some basic information for each solution, such as the distances, so that Sam's can compare those solutions and pick the one they think is best. For instance, if driver 1 needs to go to stops A, B, C, but we could also offer the option of driver 1 going to B, D, A etc. 
+    
+    \item We would also like to provide the time each driver needs to spend on going to each stop or maybe the predicted time they arrive each stop. We would like to do further research on what the google API can compute as far as distances and time associated with those distances. If the google API have the ability to calculate the time between two certain places, it will help a lot.  
+    
+    \item We may also provide some alternative solutions in case that some unexpected things happen, such as, a certain car needs to repair or maintain.
+\end{itemize}
+
+\subsection{The Key Components}
+\begin{itemize}
+    \item An algorithm, and why we chose this algorithm versus other algorithms.
+    \item What the algorithm is capable of and what areas it is lacking in. 
+    \item Explain our algorithm by writing some comments in the python program in case the sponsor wants to do some adjustments. 
+\end{itemize}
+
+\subsection{The Resources We Need}
+Python, sample data, sample schedules, Google API, access to the user interface that was created by group 1, access to the test results from the testers. 
+
+\subsection{The Measurement of Success}
+We will measure success by using a combination of the testing results, our measurements of distance or time, and a solution that makes sense to the people from Sam’s. We can show Sam's the solution the program gets by using previous data they provide, and it can show him what our programs can do in comparison to what they currently can do. If possible, we may  use the test algorithm from the other group.
+
+\subsection{The Report  of Our Results}
+We will finish the report of our results, concluding the description of the program, the algorithm we choose, the test and test outcome of our program, etc.
+We will do a presentation for the report to briefly show our program and answer any questions about our program.
+
+\subsection{The Decision Points We Need Make}
+\begin{itemize}
+    \item 	Decide on which algorithm we use for the program 
+    \item	Decide how we can choose which route was the best
+    \item	Decide whether or not we can add time or only measure distance 
+    \item	Decide how big of a service area we are to give each driver for each route
+    \item	Decide whether the schedule that we have decided is feasible
+    \item   Decide whether we use some other algorithm to enhance the solution we given, such as 2-opt
+    \item   Decide what to do if our program does not work.
+\end{itemize}
+
+\subsection{Fall Back Plan}
+For the worst case scenario, we will at least give some solutions for Vehicle Routing Problem maybe without adding further constraints for this real world problem, which is the Phase 1 of our plan.
+
+\subsection{Other Issues we Think:}
+\subsubsection{Usage of Google API}
+We have already discussed something about Google API. Because using Google API is relatively expansive, so maybe by not using it will reduce the cost of Sam's which is also the main issue Sam's concerns. Therefore, we face the trade off between the benefit of using the Google API and the cost of using it. By using it, we can directly get the distance matrix will help a lot and it also can provide some information of the time we need to spend between two places. However, there are not too many customers who have time require, so maybe we can just ignore the time part. In this case, because our algorithm will give a list of possible results, so we think the managers can just find one of them, which can fulfill the time require. Another thing we concern is that whether there is a student account or some free try of Google API for us to find out whether using it benefits our result or not.
+
+\subsubsection{The Decision of Algorithm}
+We think it is the main part of whole program and we think there is not enough time for us to try every possible algorithm mentioned in the class. Therefore, we can use the presentations in class combined with some other resources we find on the internet to help us pick an algorithm we think is feasible. We think all of these algorithms should be capable for the vehicle routing problem, so it should not be a problem for us to finish Phase 1 of the whole plan.
+
+\subsubsection{Usage of Algorithm Which Can Provide Better Solution}
+We think that some algorithms can give better solutions than others, but using these algorithms may require much more computing time. Therefore, we face the decision between whether or not to use these algorithms. In Phase 2 we may try some other algorithms to find out whether the computing times are cost-efficient. 
+
+\section{Management Plan}
+For the management plan, we will divide the whole project into three parts. Besides, We will all collaborate on the algorithm and other part of our project, such as, the report and PowerPoint, we plan on working as a group for all written deliverables. In order to achieve that, we will use some online tools, such as overleaf, and other software which we can code in python together online. We have varied schedules so we will primarily communicate in class or via a group email or through canvas starting today, so that the online coding will help us a lot for that we can share our ideas by writhing comment in the code. 
+
+\subsection{Phase 1}
+Phase 1 is also our fall back plan of our project. In this part we will build the mathematical model of the problem, pick and code the algorithm to solve the vehicle routing problem. Besides, we may write the Phase 1 report to maybe conclude what we have done, such as the reason why we pick the algorithm, the ability of the algorithm (the result it gets is the local minimum or global minimum), some potential problems we need to work on and maybe further plan of our project, etc. This is the least and the most important part we will do, and the time arrangement of Phase 2, or even the final outcome of our group work depend on the Phase 1.
+
+\subsection{Phase 2}
+In Phase 2, after we already have the algorithm for the vehicle routing problem, we can add some real problem constraint in the algorithm, such as, the size of the truck, the distance between the storage locations and landfills, the time window problem and maybe some emergence solutions. Besides, if possible, we can try other algorithm may improve the solutions. Maybe we can even create a test algorithm for us to test the solutions, but how much we can do in Phase 2 depends on the time we spend in Phase 1. 
+
+\subsection{Phase 3}
+This part of our work is mainly about writing report and preparing the presentation and maybe write more comment in the code to make it more understandable. \\
+\hspace{\fill}\newline
+In sum, we will at least finish the Phase 1 and Phase 3, and for Phase 2, we will try our best to solve as many problems as possible. 
+\subsection{Timeline}
+
+\subsubsection*{\date{Sept. 24$^{th}$}}
+    Due date for project proposal is September 30th, we would like to have a collaboration on this by 9/24/2019 and then we can work on edits and polishing for the next 5 days until the 30th
+
+\subsubsection*{\date{Sept. 30$^{th}$}}
+    Project proposal is due.
+    
+\subsubsection*{\date{Oct. 20$^{th}$}}
+    We need to decide which algorithm we are using by Oct. 14th. Because in the week before Oct. 18th, we should hear all the presentations so that we should know those algorithm and  have the ability to choose the one we think should work. There are two classes in this week, so that we can discuss the algorithm in classes, even we do not finish in class, we still can do it in the weekend.
+
+\subsubsection*{\date{Nov. 10$^{th}$}}
+    We give us three weeks to finish the Phase 1, but the time should be flexible, if we do not finish it in time, we will delay the due day of finishing Phase 1. Between Oct 20th and Nov 17th, we should try our best to finish the work we mentioned in the Phase 1 part.
+    
+\subsubsection*{\date{Nov. 24$^{th}$}}
+    The time between Nov. 10th and Nov. 24th, we will work on the part of Phase 2 and the time is also flexible. The order of the problem we want to solve may be decided in the report of Phase 1.
+    
+\subsubsection*{\date{Dec. 7$^{th}$}}
+    By Dec 7th, we should finish the final report and final presentation which is also the Phase 3 in our project.
+\end{document}
