@@ -66,6 +66,7 @@ for pt in cntr:
 
 ax2.legend()
 
+#output the data of cluster 1
 x1 = alldata[0, u_orig.argmax(axis=0) == 1]
 y1 = alldata[1, u_orig.argmax(axis=0) == 1]
 
