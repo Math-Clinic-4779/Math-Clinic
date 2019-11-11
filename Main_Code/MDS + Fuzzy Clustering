@@ -1,0 +1,60 @@
+from __future__ import division, print_function
+import pandas as pd
+import numpy as np
+from sklearn import manifold
+import matplotlib.pyplot as plt
+import skfuzzy as fuzz
+
+data = pd.read_csv(r'D:\mds\test2.csv',encoding = "utf-8")
+mds = manifold.MDS(n_components=2, dissimilarity="precomputed", random_state=6)
+results = mds.fit(data.values)
+
+cities = data.columns
+coords = results.embedding_
+
+fig = plt.figure(figsize=(12,10))
+
+plt.subplots_adjust(bottom = 0.1)
+plt.scatter(coords[:, 0], coords[:, 1])
+
+for label, x, y in zip(cities, coords[:, 0], coords[:, 1]):
+    plt.annotate(
+        label,
+        xy = (x, y),
+        xytext = (-20, 20),
+        textcoords = 'offset points'
+    )
+
+centers = [[4, 2],
+           [1, 7],
+           [5, 6]]
+
+coords =np.vstack((coords[:,0],coords[:,1]))
+
+cntr, u_orig, _, _, _, _, _ = fuzz.cluster.cmeans(
+    coords, 3, 2, error=0.005, maxiter=1000)
+
+# Show 3-cluster model
+fig2, ax2 = plt.subplots()
+ax2.set_title('Trained model')
+for j in range(3):
+    ax2.plot(coords[0, u_orig.argmax(axis=0) == j],
+             coords[1, u_orig.argmax(axis=0) == j], 'o',
+             label='series ' + str(j))
+
+
+for pt in cntr:
+    print (pt)
+    ax2.plot(pt[0], pt[1], 's')
+
+
+ax2.legend()
+
+x1 = coords[0, u_orig.argmax(axis=0) == 1]
+y1 = coords[1, u_orig.argmax(axis=0) == 1]
+
+for i in range(len(x1)):
+    print([x1[i],y1[i]])
+plt.show()
+
+
